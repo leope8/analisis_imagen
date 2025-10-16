@@ -1,0 +1,17 @@
+Leo Pérez Peña y Enrique Juliá Arévalo 
+
+Las diferencias observadas entre los dos registros 
+
+Ambos registros son bastante similares. Tanto a simple vista como al observar los parámetros resultantes, pese a pequeñas diferencias, los registros de la pre y post-operación del ratón 9 son muy parecidos. No se observan grandes deformaciones ni errores evidentes en ninguno de los dos casos, lo que indica que el proceso de registro ha funcionado correctamente en ambas condiciones. Esto sugiere que las imágenes de partida eran ya bastante similares, o que el algoritmo de registro ha sido suficientemente robusto como para compensar las diferencias iniciales sin generar artefactos o distorsiones notables. 
+
+Cómo las diferencias iniciales entre imágenes en movimiento afectas al registro 
+
+Al final, dependiendo de la imagen, dependiendo de lo movida o distorsionada que esté, la imagen tendrá que ser más o menos modificada para ajustarse a la imagen fija. De esta manera, cuanto más diferente o perjudicada sea la imagen en movimiento, más habrá que modificarla y será más difícil conseguir un registro de la misma calidad. Por eso, la calidad inicial de la imagen en movimiento es un factor clave para obtener un buen resultado en el registro. 
+
+Qué métricas son más informativas para evaluar la calidad del registro 
+
+Para evaluar la calidad del registro, todas las métricas nos dan algo de información, y depende de la parte que te importe más evaluar. Aun así, dentro de todos los parámetros, clasificaría como más informativas las medidas de “Cross-Correlation” y la MSD. La correlación cruzada nos da información sobre el parecido de las imágenes, al igual que el MSD, permitiendo conocer con un único valor cómo se parecen la imagen fija y el registro. Estas métricas son especialmente útiles porque resumen en un número la calidad del alineamiento, facilitando la comparación entre diferentes registros. 
+
+Como la visualización del campo de deformación ayuda a entender la transformación 
+
+El campo de deformación, al final, es una forma muy visual de entender qué tipo de desplazamiento y modificaciones sufre la imagen móvil durante el registro para aproximarse a la imagen fija. Nos muestra las zonas que están más desplazadas y cuáles no, permitiendo identificar regiones donde el algoritmo ha tenido que aplicar más correcciones. Esto ayuda a interpretar si el registro ha sido suave y anatómicamente coherente, o si ha habido zonas con transformaciones excesivas que podrían indicar problemas en el proceso. 
